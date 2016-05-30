@@ -1,4 +1,11 @@
 import sys
+
+if len(sys.argv) < 3:
+    print('Usage:')
+    print('python algs.py grammar input')
+    sys.exit()
+
+
 '''
 def getFIRST(grammar):
     FIRST = {x:set() for x in grammar}
@@ -31,6 +38,8 @@ def right(line):
 
 grammar = {left(line.strip()):right(line.strip()) for line in open(sys.argv[1]) if line.strip() != ""}
 print(grammar)
+
+
 '''
 FIRST = getFIRST(grammar)
 print('FIRST')
@@ -38,6 +47,7 @@ print('FIRST')
 for nonterm, first in FIRST.items():
     print(nonterm, ':', first)
 '''
+
 
 
 def rec(gen):
@@ -106,7 +116,7 @@ with open("recdes.py", 'w') as file:
 import recdes
 from collections import deque
 print()
-for line in open("input.txt"):
+for line in open(sys.argv[2]):
     line = line.strip()
     print(deque(line))
     try:
