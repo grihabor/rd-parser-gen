@@ -1,0 +1,7 @@
+S {A|(B|[C|x|eps
+A x:SQ|}
+Q ,A|}
+B SW|)
+W ,B|)
+C SE|]
+E ,C|]
